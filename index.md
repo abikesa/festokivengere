@@ -24,12 +24,12 @@ MathJax.Hub.Config({
 > Apple has built a reputation for prioritizing user [privacy](https://heinonline.org/HOL/LandingPage?handle=hein.journals/walq99&div=26&id=&page=) and [security](https://ieeexplore.ieee.org/abstract/document/9066964)
 
 ### Activation Function, $Q$: 1st, 3rd, 5th, [♭♭7th](https://en.wikipedia.org/wiki/Chord_notation#Chord_quality), 9th  
-- Hunter-gatherer/`War`: spiritual teachings  (I)
+- [Hunter](https://en.wikipedia.org/wiki/Luis_Palau)-[gatherer](https://en.wikipedia.org/wiki/Eurofest_%2775)/`War`: spiritual teachings  (I)
 - Peasant/`Economics`: [humanism](https://www.uuftc.org) (B)
         
 ### [Biases](https://www.youtube.com/watch?v=lAcYahc74o8), $U()$: 11th, 13th
-- Farmer/`Calculus`: judeo, christian (G)
-- Manufacturer/`Philosophy`: world religions (Y)
+- [Farmer](https://en.wikipedia.org/wiki/Explo_%2772)/`Calculus`: judeo, christian (G)
+- [Manufacturer](https://www.latimes.com/archives/la-xpm-1986-01-04-me-24254-story.html)/`Philosophy`: world religions (Y)
        
 ### Weights, $\frac{dU()}{dQ}$: ♯9,♭9,♯11,♭13 
 - Electricity/`Musick`: prophetic utterances ([O](https://www.youtube.com/watch?v=1aM1KYvl4Dw))
