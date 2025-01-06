@@ -427,9 +427,7 @@ document.write(`
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code provided by the user with some minor adjustments to run and generate the visualization</span>
-
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
 
@@ -440,27 +438,16 @@ document.write(`
         <span class="s1">&#39;Yellowstone&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;G1 &amp; G2&#39;</span><span class="p">],</span>
         <span class="s1">&#39;Input&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;N4, N5&#39;</span><span class="p">,</span> <span class="s1">&#39;N1, N2, N3&#39;</span><span class="p">],</span>
         <span class="s1">&#39;Hidden&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Sympathetic&#39;</span><span class="p">,</span> <span class="s1">&#39;G3&#39;</span><span class="p">,</span> <span class="s1">&#39;Parasympathetic&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;Output&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Venoms&#39;</span><span class="p">,</span> <span class="s1">&#39;Toxins&#39;</span><span class="p">,</span> <span class="s1">&#39;Nerve Agents&#39;</span><span class="p">,</span> <span class="s1">&#39;Cognition&#39;</span><span class="p">,</span> <span class="s1">&#39;Microbes&#39;</span><span class="p">]</span>
-    <span class="p">}</span>
-
-<span class="c1"># Define weights for the connections</span>
-<span class="k">def</span> <span class="nf">define_weights</span><span class="p">():</span>
-    <span class="k">return</span> <span class="p">{</span>
-        <span class="s1">&#39;Pre-Input-Yellowstone&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.6</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.4</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.3</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.7</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.8</span><span class="p">]]),</span>
-        <span class="s1">&#39;Yellowstone-Input&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">]]),</span>
-        <span class="s1">&#39;Input-Hidden&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]]),</span>
-        <span class="s1">&#39;Hidden-Output&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
-            <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span>
-            <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span>
-            <span class="p">[</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">]</span>
-        <span class="p">])</span>
+        <span class="s1">&#39;Output&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Ecosystem&#39;</span><span class="p">,</span> <span class="s1">&#39;Vulnerabilities&#39;</span><span class="p">,</span> <span class="s1">&#39;AChR&#39;</span><span class="p">,</span> <span class="s1">&#39;Strengths&#39;</span><span class="p">,</span> <span class="s1">&#39;Neurons&#39;</span><span class="p">]</span>
     <span class="p">}</span>
 
 <span class="c1"># Assign colors to nodes</span>
 <span class="k">def</span> <span class="nf">assign_colors</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;G1 &amp; G2&#39;</span><span class="p">:</span>
         <span class="k">return</span> <span class="s1">&#39;yellow&#39;</span>
-    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Pre-Input&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Sound&#39;</span><span class="p">,</span> <span class="s1">&#39;Tactful&#39;</span><span class="p">,</span> <span class="s1">&#39;Firm&#39;</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Pre-Input&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Tactful&#39;</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
+    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Pre-Input&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Firm&#39;</span><span class="p">]:</span>
         <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
     <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Input&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;N1, N2, N3&#39;</span><span class="p">:</span>
         <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
@@ -472,11 +459,11 @@ document.write(`
         <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Sympathetic&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
     <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Output&#39;</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Microbes&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Neurons&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Cognition&#39;</span><span class="p">,</span> <span class="s1">&#39;Nerve Agents&#39;</span><span class="p">,</span> <span class="s1">&#39;Toxins&#39;</span><span class="p">]:</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Strengths&#39;</span><span class="p">,</span> <span class="s1">&#39;AChR&#39;</span><span class="p">,</span> <span class="s1">&#39;Vulnerabilities&#39;</span><span class="p">]:</span>
             <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Venoms&#39;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Ecosystem&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
     <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>  <span class="c1"># Default color</span>
 
@@ -489,7 +476,6 @@ document.write(`
 <span class="c1"># Create and visualize the neural network graph</span>
 <span class="k">def</span> <span class="nf">visualize_nn</span><span class="p">():</span>
     <span class="n">layers</span> <span class="o">=</span> <span class="n">define_layers</span><span class="p">()</span>
-    <span class="n">weights</span> <span class="o">=</span> <span class="n">define_weights</span><span class="p">()</span>
     <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
     <span class="n">pos</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">node_colors</span> <span class="o">=</span> <span class="p">[]</span>
@@ -503,17 +489,14 @@ document.write(`
             <span class="n">pos</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="n">position</span>
             <span class="n">node_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">assign_colors</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer_name</span><span class="p">))</span>
 
-    <span class="c1"># Add edges and weights</span>
-    <span class="k">for</span> <span class="n">layer_pair</span><span class="p">,</span> <span class="n">weight_matrix</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span>
-        <span class="p">[(</span><span class="s1">&#39;Pre-Input&#39;</span><span class="p">,</span> <span class="s1">&#39;Yellowstone&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Yellowstone&#39;</span><span class="p">,</span> <span class="s1">&#39;Input&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Input&#39;</span><span class="p">,</span> <span class="s1">&#39;Hidden&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Hidden&#39;</span><span class="p">,</span> <span class="s1">&#39;Output&#39;</span><span class="p">)],</span>
-        <span class="p">[</span><span class="n">weights</span><span class="p">[</span><span class="s1">&#39;Pre-Input-Yellowstone&#39;</span><span class="p">],</span> <span class="n">weights</span><span class="p">[</span><span class="s1">&#39;Yellowstone-Input&#39;</span><span class="p">],</span> <span class="n">weights</span><span class="p">[</span><span class="s1">&#39;Input-Hidden&#39;</span><span class="p">],</span> <span class="n">weights</span><span class="p">[</span><span class="s1">&#39;Hidden-Output&#39;</span><span class="p">]]</span>
-    <span class="p">):</span>
+    <span class="c1"># Add edges (without weights)</span>
+    <span class="k">for</span> <span class="n">layer_pair</span> <span class="ow">in</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;Pre-Input&#39;</span><span class="p">,</span> <span class="s1">&#39;Yellowstone&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Yellowstone&#39;</span><span class="p">,</span> <span class="s1">&#39;Input&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Input&#39;</span><span class="p">,</span> <span class="s1">&#39;Hidden&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Hidden&#39;</span><span class="p">,</span> <span class="s1">&#39;Output&#39;</span><span class="p">)</span>
+    <span class="p">]:</span>
         <span class="n">source_layer</span><span class="p">,</span> <span class="n">target_layer</span> <span class="o">=</span> <span class="n">layer_pair</span>
-        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">source</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">layers</span><span class="p">[</span><span class="n">source_layer</span><span class="p">]):</span>
-            <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">target</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">layers</span><span class="p">[</span><span class="n">target_layer</span><span class="p">]):</span>
-                <span class="n">weight</span> <span class="o">=</span> <span class="n">weight_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">weight_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">weight_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">else</span> <span class="mi">0</span>
-                <span class="k">if</span> <span class="n">weight</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Add edges only for non-zero weights</span>
-                    <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="n">weight</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">source</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">[</span><span class="n">source_layer</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">target</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">[</span><span class="n">target_layer</span><span class="p">]:</span>
+                <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
 
     <span class="c1"># Draw the graph</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
@@ -521,9 +504,7 @@ document.write(`
         <span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span>
         <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;arc3,rad=0.1&quot;</span>
     <span class="p">)</span>
-    <span class="n">edge_labels</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">get_edge_attributes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">)</span>
-    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edge_labels</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">edge_labels</span><span class="o">=</span><span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">v</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">edge_labels</span><span class="o">.</span><span class="n">items</span><span class="p">()})</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;ACh induces synaptic plasticity (backpropagation)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Red Queen Hypothesis&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="c1"># Run the visualization</span>
@@ -533,7 +514,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../../_images/45f4236bea78078ddb6a79842a672ea4cb476352ee3e8b344eddd56199ece680.png" src="../../_images/45f4236bea78078ddb6a79842a672ea4cb476352ee3e8b344eddd56199ece680.png" />
+<img alt="../../_images/5800d473237d1ba59c9584a994afe258e2b015d414308414376008a6a659b4e4.png" src="../../_images/5800d473237d1ba59c9584a994afe258e2b015d414308414376008a6a659b4e4.png" />
 </div>
 </div>
 <figure class="align-default" id="id2">

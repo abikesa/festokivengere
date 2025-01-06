@@ -381,9 +381,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -399,19 +397,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-input-life-earth-cosmos-etc-sensory"><strong>Pre-Input (Life, Earth, Cosmos, etc.) → Sensory</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yellowstone-nexus-dorsal-root-cranial-nerve"><strong>Yellowstone (Nexus) → Dorsal Root/Cranial Nerve</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#input-action-feed-breed-central"><strong>Input (Action, Feed &amp; Breed) → Central</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hidden-sympathetic-acetylcholine-parasympathetic-autonomic"><strong>Hidden (Sympathetic, Acetylcholine, Parasympathetic) → Autonomic</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#output-venoms-toxins-nerve-agents-etc-postsynaptic"><strong>Output (Venoms, Toxins, Nerve Agents, etc.) → Postsynaptic</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commentary">Commentary:</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -437,61 +422,36 @@ document.write(`
 <span class="c1"># Define the neural network structure</span>
 <span class="k">def</span> <span class="nf">define_layers</span><span class="p">():</span>
     <span class="k">return</span> <span class="p">{</span>
-        <span class="s1">&#39;Pre-Input&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Root&#39;</span><span class="p">,</span><span class="s1">&#39;Ploughshares&#39;</span><span class="p">,</span> <span class="s1">&#39;Light&#39;</span><span class="p">,</span> <span class="s1">&#39;Sound&#39;</span><span class="p">,</span> <span class="s1">&#39;Tactful&#39;</span><span class="p">,</span> <span class="s1">&#39;Firm&#39;</span><span class="p">,</span> <span class="p">],</span>
-        <span class="s1">&#39;Yellowstone&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Stem&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;Input&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Weed&#39;</span><span class="p">,</span> <span class="s1">&#39;Branch&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;Hidden&#39;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="s1">&#39;Canker&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;Farming&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;Leaf&#39;</span><span class="p">,</span>
-        <span class="p">],</span>
-        <span class="s1">&#39;Output&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Transformation&#39;</span><span class="p">,</span> <span class="s1">&#39;Toxins&#39;</span><span class="p">,</span> <span class="s1">&#39;Produce&#39;</span><span class="p">,</span> <span class="s1">&#39;Nutrition&#39;</span><span class="p">,</span> <span class="s1">&#39;Starch&#39;</span><span class="p">,</span>    <span class="p">]</span>
-    <span class="p">}</span>
-
-<span class="c1"># Define weights for the connections</span>
-<span class="k">def</span> <span class="nf">define_weights</span><span class="p">():</span>
-    <span class="k">return</span> <span class="p">{</span>
-        <span class="s1">&#39;Pre-Input-Yellowstone&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
-            <span class="p">[</span><span class="mf">0.6</span><span class="p">],</span>
-            <span class="p">[</span><span class="mf">0.5</span><span class="p">],</span>
-            <span class="p">[</span><span class="mf">0.4</span><span class="p">],</span>
-            <span class="p">[</span><span class="mf">0.3</span><span class="p">],</span>
-            <span class="p">[</span><span class="mf">0.7</span><span class="p">],</span>
-            <span class="p">[</span><span class="mf">0.8</span><span class="p">],</span>
-            <span class="p">[</span><span class="mf">0.6</span><span class="p">]</span>
-        <span class="p">]),</span>
-        <span class="s1">&#39;Yellowstone-Input&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
-            <span class="p">[</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">]</span>
-        <span class="p">]),</span>
-        <span class="s1">&#39;Input-Hidden&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]]),</span>
-        <span class="s1">&#39;Hidden-Output&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
-            <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span>
-            <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span>
-            <span class="p">[</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">]</span>
-        <span class="p">])</span>
+        <span class="s1">&#39;Pre-Input&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Life&#39;</span><span class="p">,</span> <span class="s1">&#39;Earth&#39;</span><span class="p">,</span> <span class="s1">&#39;Cosmos&#39;</span><span class="p">,</span> <span class="s1">&#39;Sound&#39;</span><span class="p">,</span> <span class="s1">&#39;Tactful&#39;</span><span class="p">,</span> <span class="s1">&#39;Firm&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Yellowstone&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;G1 &amp; G2&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Input&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;N4, N5&#39;</span><span class="p">,</span> <span class="s1">&#39;N1, N2, N3&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Hidden&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Sympathetic&#39;</span><span class="p">,</span> <span class="s1">&#39;G3&#39;</span><span class="p">,</span> <span class="s1">&#39;Parasympathetic&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Output&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Ecosystem&#39;</span><span class="p">,</span> <span class="s1">&#39;Vulnerabilities&#39;</span><span class="p">,</span> <span class="s1">&#39;AChR&#39;</span><span class="p">,</span> <span class="s1">&#39;Strengths&#39;</span><span class="p">,</span> <span class="s1">&#39;Neurons&#39;</span><span class="p">]</span>
     <span class="p">}</span>
 
 <span class="c1"># Assign colors to nodes</span>
 <span class="k">def</span> <span class="nf">assign_colors</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Stem&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;G1 &amp; G2&#39;</span><span class="p">:</span>
         <span class="k">return</span> <span class="s1">&#39;yellow&#39;</span>
-    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Pre-Input&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Sound&#39;</span><span class="p">,</span> <span class="s1">&#39;Tactful&#39;</span><span class="p">,</span> <span class="s1">&#39;Firm&#39;</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Pre-Input&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Tactful&#39;</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
+    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Pre-Input&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Firm&#39;</span><span class="p">]:</span>
         <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
-    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Input&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Branch&#39;</span><span class="p">:</span>
+    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Input&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;N1, N2, N3&#39;</span><span class="p">:</span>
         <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
     <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Hidden&#39;</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Leaf&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Parasympathetic&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Farming&#39;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;G3&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Canker&#39;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Sympathetic&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
     <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Output&#39;</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Starch&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Neurons&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Nutrition&#39;</span><span class="p">,</span> <span class="s1">&#39;Produce&#39;</span><span class="p">,</span> <span class="s1">&#39;Toxins&#39;</span><span class="p">]:</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Strengths&#39;</span><span class="p">,</span> <span class="s1">&#39;AChR&#39;</span><span class="p">,</span> <span class="s1">&#39;Vulnerabilities&#39;</span><span class="p">]:</span>
             <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Transformation&#39;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Ecosystem&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
     <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>  <span class="c1"># Default color</span>
 
@@ -504,7 +464,6 @@ document.write(`
 <span class="c1"># Create and visualize the neural network graph</span>
 <span class="k">def</span> <span class="nf">visualize_nn</span><span class="p">():</span>
     <span class="n">layers</span> <span class="o">=</span> <span class="n">define_layers</span><span class="p">()</span>
-    <span class="n">weights</span> <span class="o">=</span> <span class="n">define_weights</span><span class="p">()</span>
     <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
     <span class="n">pos</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">node_colors</span> <span class="o">=</span> <span class="p">[]</span>
@@ -518,38 +477,22 @@ document.write(`
             <span class="n">pos</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="n">position</span>
             <span class="n">node_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">assign_colors</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer_name</span><span class="p">))</span>
 
-    <span class="c1"># Add edges and weights</span>
-    <span class="k">for</span> <span class="n">layer_pair</span><span class="p">,</span> <span class="n">weight_matrix</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span>
-        <span class="p">[(</span><span class="s1">&#39;Pre-Input&#39;</span><span class="p">,</span> <span class="s1">&#39;Yellowstone&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Yellowstone&#39;</span><span class="p">,</span> <span class="s1">&#39;Input&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Input&#39;</span><span class="p">,</span> <span class="s1">&#39;Hidden&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Hidden&#39;</span><span class="p">,</span> <span class="s1">&#39;Output&#39;</span><span class="p">)],</span>
-        <span class="p">[</span><span class="n">weights</span><span class="p">[</span><span class="s1">&#39;Pre-Input-Yellowstone&#39;</span><span class="p">],</span> <span class="n">weights</span><span class="p">[</span><span class="s1">&#39;Yellowstone-Input&#39;</span><span class="p">],</span> <span class="n">weights</span><span class="p">[</span><span class="s1">&#39;Input-Hidden&#39;</span><span class="p">],</span> <span class="n">weights</span><span class="p">[</span><span class="s1">&#39;Hidden-Output&#39;</span><span class="p">]]</span>
-    <span class="p">):</span>
+    <span class="c1"># Add edges (without weights)</span>
+    <span class="k">for</span> <span class="n">layer_pair</span> <span class="ow">in</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;Pre-Input&#39;</span><span class="p">,</span> <span class="s1">&#39;Yellowstone&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Yellowstone&#39;</span><span class="p">,</span> <span class="s1">&#39;Input&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Input&#39;</span><span class="p">,</span> <span class="s1">&#39;Hidden&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Hidden&#39;</span><span class="p">,</span> <span class="s1">&#39;Output&#39;</span><span class="p">)</span>
+    <span class="p">]:</span>
         <span class="n">source_layer</span><span class="p">,</span> <span class="n">target_layer</span> <span class="o">=</span> <span class="n">layer_pair</span>
-        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">source</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">layers</span><span class="p">[</span><span class="n">source_layer</span><span class="p">]):</span>
-            <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">target</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">layers</span><span class="p">[</span><span class="n">target_layer</span><span class="p">]):</span>
-                <span class="n">weight</span> <span class="o">=</span> <span class="n">weight_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span>
-                <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="n">weight</span><span class="p">)</span>
-
-    <span class="c1"># Customize edge thickness for specific relationships</span>
-    <span class="n">edge_widths</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">edges</span><span class="p">():</span>
-        <span class="k">if</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">[</span><span class="s1">&#39;Hidden&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">v</span> <span class="o">==</span> <span class="s1">&#39;Kapital&#39;</span><span class="p">:</span>
-            <span class="n">edge_widths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>  <span class="c1"># Highlight key edges</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">edge_widths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">source</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">[</span><span class="n">source_layer</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">target</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">[</span><span class="n">target_layer</span><span class="p">]:</span>
+                <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
 
     <span class="c1"># Draw the graph</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">16</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
     <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span>
         <span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span>
-        <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">edge_widths</span>
+        <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;arc3,rad=0.1&quot;</span>
     <span class="p">)</span>
-    <span class="n">edge_labels</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">get_edge_attributes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">)</span>
-    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edge_labels</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">edge_labels</span><span class="o">=</span><span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">v</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">edge_labels</span><span class="o">.</span><span class="n">items</span><span class="p">()})</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Sensory, Dorsal-Root/Cranial Nerve, Central, Autonomic, Postsynaptic&quot;</span><span class="p">)</span>
-    
-    <span class="c1"># Save the figure to a file</span>
-    <span class="c1"># plt.savefig(&quot;figures/logo.png&quot;, format=&quot;png&quot;)</span>
-
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Red Queen Hypothesis&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="c1"># Run the visualization</span>
@@ -559,7 +502,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../../_images/968319181d80d38f761fa8d1814824c0daed6bc417a360e81da598fee70a0905.png" src="../../_images/968319181d80d38f761fa8d1814824c0daed6bc417a360e81da598fee70a0905.png" />
+<img alt="../../_images/5800d473237d1ba59c9584a994afe258e2b015d414308414376008a6a659b4e4.png" src="../../_images/5800d473237d1ba59c9584a994afe258e2b015d414308414376008a6a659b4e4.png" />
 </div>
 </div>
 <figure class="align-default" id="id2">
@@ -568,45 +511,6 @@ document.write(`
 <p><span class="caption-number">Fig. 19 </span><span class="caption-text">The structure of this neural network metaphorically mirrors a tree’s anatomy, highlighting the elegance and interconnectedness of its layers. Each layer represents a crucial element in the system’s growth, function, and balance, much like the natural components of a tree. This layered structure beautifully captures the organic interplay between grounding, growth, and emergence, showcasing the elegance of neural networks as metaphors for natural and systemic complexity. We also transform the original essay into a new interpretation inspired by the neural network structure, shifting the focus to a dynamic, living ecosystem, intertwining biological, philosophical, and socio-historical themes while maintaining the metaphorical depth. We hereby integrate the metaphorical essence of the original essay but transform its tone and structure to focus on life as an ecosystem, bridging natural and conceptual systems.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Ah, I see now—you’re asking for an interpretive alignment of the <strong>five steps</strong> (sensory, dorsal root/cranial nerve, central, autonomic, postsynaptic) with the <strong>five layers</strong> in your neural network model. Here’s how I see these two frameworks mapping onto each other:</p>
-<hr class="docutils" />
-<section id="pre-input-life-earth-cosmos-etc-sensory">
-<h2><strong>Pre-Input (Life, Earth, Cosmos, etc.) → Sensory</strong><a class="headerlink" href="#pre-input-life-earth-cosmos-etc-sensory" title="Permalink to this heading">#</a></h2>
-<p>This layer is the foundation, akin to the sensory step. It represents the raw, unprocessed inputs flowing in from the environment—cosmic radiation, tactile interactions, and the foundational stimuli of existence. The <strong>sensory layer</strong> captures data without yet making meaning of it, aligning with this raw and diverse set of “pre-inputs.”</p>
-<hr class="docutils" />
-</section>
-<section id="yellowstone-nexus-dorsal-root-cranial-nerve">
-<h2><strong>Yellowstone (Nexus) → Dorsal Root/Cranial Nerve</strong><a class="headerlink" href="#yellowstone-nexus-dorsal-root-cranial-nerve" title="Permalink to this heading">#</a></h2>
-<p>The “Nexus” is the pivotal relay, analogous to the dorsal roots and cranial nerves. It serves as a <strong>gateway</strong>, selectively transferring sensory inputs to the next stage. Just as dorsal roots funnel sensory information to the spinal cord and cranial nerves handle specialized transmission directly to the brain, Yellowstone acts as the central hub ensuring the right data is prioritized.</p>
-<hr class="docutils" />
-</section>
-<section id="input-action-feed-breed-central">
-<h2><strong>Input (Action, Feed &amp; Breed) → Central</strong><a class="headerlink" href="#input-action-feed-breed-central" title="Permalink to this heading">#</a></h2>
-<p>The <strong>central step</strong> integrates incoming signals, deciding how to process and prioritize them. Similarly, the Input layer represents the processing nodes where basic behaviors (like “Feed &amp; Breed” or “Action”) emerge. This layer compresses raw data into actionable categories, just as the CNS compresses and organizes sensory input into coherent perceptions or actions.</p>
-<hr class="docutils" />
-</section>
-<section id="hidden-sympathetic-acetylcholine-parasympathetic-autonomic">
-<h2><strong>Hidden (Sympathetic, Acetylcholine, Parasympathetic) → Autonomic</strong><a class="headerlink" href="#hidden-sympathetic-acetylcholine-parasympathetic-autonomic" title="Permalink to this heading">#</a></h2>
-<p>The <strong>hidden layer</strong> is clearly aligned with the autonomic nervous system. It governs involuntary responses like fight/flight (Sympathetic), rest/digest (Parasympathetic), and neurotransmitter modulation (Acetylcholine). This step reflects the deeper, less visible processes that regulate equilibrium, balancing competing forces in a dynamic, ongoing manner.</p>
-<hr class="docutils" />
-</section>
-<section id="output-venoms-toxins-nerve-agents-etc-postsynaptic">
-<h2><strong>Output (Venoms, Toxins, Nerve Agents, etc.) → Postsynaptic</strong><a class="headerlink" href="#output-venoms-toxins-nerve-agents-etc-postsynaptic" title="Permalink to this heading">#</a></h2>
-<p>The <strong>output layer</strong> mirrors the postsynaptic step. This is where signals produce tangible effects—be it chemical (venoms, toxins), behavioral (cognition), or ecological (microbial interactions). Postsynaptic responses fine-tune these effects, determining whether the system learns, adapts, or reinforces certain pathways.</p>
-<hr class="docutils" />
-</section>
-<section id="commentary">
-<h2>Commentary:<a class="headerlink" href="#commentary" title="Permalink to this heading">#</a></h2>
-<p>This alignment feels natural because both models describe a <strong>hierarchical, feedback-driven system</strong>:</p>
-<ol class="arabic simple">
-<li><p><strong>Pre-Input/Sensory</strong> captures raw data.</p></li>
-<li><p><strong>Yellowstone/Dorsal Root</strong> ensures proper routing.</p></li>
-<li><p><strong>Input/Central</strong> organizes and integrates.</p></li>
-<li><p><strong>Hidden/Autonomic</strong> modulates through dynamic feedback.</p></li>
-<li><p><strong>Output/Postsynaptic</strong> executes and adapts.</p></li>
-</ol>
-<p>Your model provides a highly symbolic, network-driven representation, while the neural system embodies the biological counterpart. Together, they converge as an elegant metaphor for how layered systems distill chaos into order.</p>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -663,26 +567,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-input-life-earth-cosmos-etc-sensory"><strong>Pre-Input (Life, Earth, Cosmos, etc.) → Sensory</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yellowstone-nexus-dorsal-root-cranial-nerve"><strong>Yellowstone (Nexus) → Dorsal Root/Cranial Nerve</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#input-action-feed-breed-central"><strong>Input (Action, Feed &amp; Breed) → Central</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hidden-sympathetic-acetylcholine-parasympathetic-autonomic"><strong>Hidden (Sympathetic, Acetylcholine, Parasympathetic) → Autonomic</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#output-venoms-toxins-nerve-agents-etc-postsynaptic"><strong>Output (Venoms, Toxins, Nerve Agents, etc.) → Postsynaptic</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commentary">Commentary:</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

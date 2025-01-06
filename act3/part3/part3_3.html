@@ -404,10 +404,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Orient</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transactional">Transactional</a></li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Orient</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 </ul>
 
@@ -441,14 +438,16 @@ document.write(`
         <span class="s1">&#39;Yellowstone&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;G1 &amp; G2&#39;</span><span class="p">],</span>
         <span class="s1">&#39;Input&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;N4, N5&#39;</span><span class="p">,</span> <span class="s1">&#39;N1, N2, N3&#39;</span><span class="p">],</span>
         <span class="s1">&#39;Hidden&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Sympathetic&#39;</span><span class="p">,</span> <span class="s1">&#39;G3&#39;</span><span class="p">,</span> <span class="s1">&#39;Parasympathetic&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;Output&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Venoms&#39;</span><span class="p">,</span> <span class="s1">&#39;Toxins&#39;</span><span class="p">,</span> <span class="s1">&#39;Nerve Agents&#39;</span><span class="p">,</span> <span class="s1">&#39;Cognition&#39;</span><span class="p">,</span> <span class="s1">&#39;Microbes&#39;</span><span class="p">]</span>
+        <span class="s1">&#39;Output&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Ecosystem&#39;</span><span class="p">,</span> <span class="s1">&#39;Vulnerabilities&#39;</span><span class="p">,</span> <span class="s1">&#39;AChR&#39;</span><span class="p">,</span> <span class="s1">&#39;Strengths&#39;</span><span class="p">,</span> <span class="s1">&#39;Neurons&#39;</span><span class="p">]</span>
     <span class="p">}</span>
 
 <span class="c1"># Assign colors to nodes</span>
 <span class="k">def</span> <span class="nf">assign_colors</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;G1 &amp; G2&#39;</span><span class="p">:</span>
         <span class="k">return</span> <span class="s1">&#39;yellow&#39;</span>
-    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Pre-Input&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Sound&#39;</span><span class="p">,</span> <span class="s1">&#39;Tactful&#39;</span><span class="p">,</span> <span class="s1">&#39;Firm&#39;</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Pre-Input&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Tactful&#39;</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
+    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Pre-Input&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Firm&#39;</span><span class="p">]:</span>
         <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
     <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Input&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;N1, N2, N3&#39;</span><span class="p">:</span>
         <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
@@ -460,11 +459,11 @@ document.write(`
         <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Sympathetic&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
     <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Output&#39;</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Microbes&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Neurons&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Cognition&#39;</span><span class="p">,</span> <span class="s1">&#39;Nerve Agents&#39;</span><span class="p">,</span> <span class="s1">&#39;Toxins&#39;</span><span class="p">]:</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Strengths&#39;</span><span class="p">,</span> <span class="s1">&#39;AChR&#39;</span><span class="p">,</span> <span class="s1">&#39;Vulnerabilities&#39;</span><span class="p">]:</span>
             <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Venoms&#39;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Ecosystem&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
     <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>  <span class="c1"># Default color</span>
 
@@ -515,7 +514,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../../_images/2cc78bfb21c753573e6d2b8f59d373a3827ecc1b64812656157c94d38e48349b.png" src="../../_images/2cc78bfb21c753573e6d2b8f59d373a3827ecc1b64812656157c94d38e48349b.png" />
+<img alt="../../_images/5800d473237d1ba59c9584a994afe258e2b015d414308414376008a6a659b4e4.png" src="../../_images/5800d473237d1ba59c9584a994afe258e2b015d414308414376008a6a659b4e4.png" />
 </div>
 </div>
 <figure class="align-default" id="id2">
@@ -524,14 +523,6 @@ document.write(`
 <p><span class="caption-number">Fig. 23 </span><span class="caption-text">Your model suggests a fascinating ecological feedback loop: the ubiquity of ACh in neural signaling likely shaped the evolutionary trajectories of predators and prey, leading to sophisticated mechanisms targeting or evading ACh systems. This resonates with the co-evolutionary “Red Queen hypothesis,” where incremental adaptations drive mutual escalation in complexity. Extending this framework, you might explore synthetic toxins or nerve agents (e.g., sarin gas) that disrupt ACh pathways. These underscore humanity’s exploitation of naturally evolved vulnerabilities. Incorporating microbial toxins targeting ACh (e.g., Clostridium botulinum) might add a microbiological dimension.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<section id="transactional">
-<h2>Transactional<a class="headerlink" href="#transactional" title="Permalink to this heading">#</a></h2>
-<p>This comment captures an intriguing intersection of evolutionary biology, neurochemistry, and human innovation, particularly in its link to the Red Queen Hypothesis. The ubiquity of acetylcholine (ACh) as a neural signaling molecule indeed sets the stage for a fascinating evolutionary arms race, where predators, prey, and pathogens fine-tune mechanisms to exploit or protect against ACh systems.</p>
-<p>Botulinum toxin (botox), produced by <em>Clostridium botulinum</em>, is an exceptional case study in this context. Evolutionarily, the bacterium weaponized this neurotoxin to disrupt ACh signaling, likely as a defensive or competitive strategy. By preventing the release of ACh at the neuromuscular junction, botulinum toxin causes paralysis—a highly effective defense against predation or a means to outcompete microbial rivals.</p>
-<p>Human adaptation of botulinum toxin flips the narrative: what evolved as a deadly mechanism is now harnessed for medical and cosmetic purposes. This duality underscores humanity’s ability to repurpose naturally evolved vulnerabilities. Botox, used to treat conditions like muscle spasms, migraines, and even hyperhidrosis, demonstrates a profound understanding of ACh pathways. Its <code class="docutils literal notranslate"><span class="pre">cosmetic</span> <span class="pre">applications</span></code>, smoothing wrinkles by paralyzing specific muscles, add a layer of irony—repurposing a bacterial weapon for vanity.</p>
-<p>In the broader ecological and evolutionary context, the incorporation of synthetic agents like sarin gas highlights humanity’s darker exploitation of these vulnerabilities. While botox represents a beneficial adaptation of microbial evolution, nerve agents like sarin epitomize humanity’s adversarial manipulation of ACh systems, weaponizing them for mass destruction. Both examples emphasize the ongoing co-evolutionary interplay between natural systems and human ingenuity.</p>
-<p>Adding a microbiological dimension to this discussion enriches our understanding of the interconnectedness of life, where even the most microscopic organisms play pivotal roles in shaping the evolutionary trajectories of larger ecosystems. Exploring <code class="docutils literal notranslate"><span class="pre">botox</span></code> as part of a broader evolutionary narrative not only highlights the ingenuity of microbial life but also raises philosophical questions about humanity’s role as both participant and manipulator in the Red Queen’s race.</p>
-</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
@@ -601,10 +592,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Orient</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transactional">Transactional</a></li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Orient</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 </ul>
 
